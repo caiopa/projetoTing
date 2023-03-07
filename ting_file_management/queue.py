@@ -14,8 +14,7 @@ class Queue(AbstractQueue):
     def dequeue(self):
          if len(self.items) == 0:
             raise IndexError("Queue is empty")
-         return self.items.pop(0)
-         
+         return self.items.pop(0)       
 
     def search(self, index):
         if( 0 <= index <= len(self.items)):
