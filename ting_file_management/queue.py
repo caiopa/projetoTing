@@ -10,14 +10,14 @@ class Queue(AbstractQueue):
 
     def enqueue(self, value):
         self.items.append(value)
-       
+
     def dequeue(self):
-         if len(self.items) == 0:
+        if len(self.items) == 0:
             raise IndexError("Queue is empty")
-         return self.items.pop(0)       
+        return self.items.pop(0)
 
     def search(self, index):
-        if( 0 <= index <= len(self.items)):
+        if(0 <= index <= len(self.items)):
             return self.items[index]
-        else: 
+        else:
             raise IndexError("Item not found in queue")
